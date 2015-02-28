@@ -47,3 +47,12 @@ title: 求送波波宝咯
         </section>
     </div>
 <p>{{ page.date | date_to_string }}</p>
+<script src="/gitblog/lib/iscroll.js"></script>
+<script>
+	seajs.config({
+	    alias: {
+	        "home":"/gitblog/js/home"
+	    }
+	});
+	seajs.use("home",function(a){a.init()});
+</script>

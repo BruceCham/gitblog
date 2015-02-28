@@ -1,0 +1,106 @@
+{
+  "resultCode":"1000",
+  "resultMsg":"领用成功",
+  "sessionId":"",
+  "rowCount": 40,
+  "infos":[
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"/gitblog/images/head-pic.png",
+        	"amount":"123",
+        	"realName":true
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":null,
+        	"amount":"123",
+        	"realName":false
+        },
+        {
+        	"phone": "133****3455",
+        	"custName": "马**",
+        	"custAvatar":"",
+        	"amount":"123",
+        	"realName":true
+        }
+    ]
+}
