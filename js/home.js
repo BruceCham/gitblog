@@ -17,7 +17,7 @@ define(function (require, exports, module) {
             contentType: "application/json;charset=UTF-8",
             data: '{}'
         }).done(function(response) {
-            if (response.resultCode === successCode) {
+            if (response.resultCode === "1000") {
                 userlist.datas = response.infos;
                 userlist.pages = Math.ceil(userlist.datas.length / userlist.per);
                 if (userlist.pages <= 0) {
@@ -113,7 +113,7 @@ define(function (require, exports, module) {
                 dataType: "json"
             })
             .done(function(data) {
-                if (data.resultCode == successCode) {
+                if (data.resultCode == "1000") {
                     var headImg3 = !data.avatar ? headImg : data.avatar;
                     $("#img-head").attr("src",headImg3);
                     if( data.rankNo && data.rankNo > 50 ){
