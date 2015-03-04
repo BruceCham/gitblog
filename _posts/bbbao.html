@@ -1,0 +1,59 @@
+---
+layout: default
+title: 求送波波宝咯
+---
+<link href="/gitblog/css/home-merge.css" rel="stylesheet" type="text/css" media="screen">
+<h2>{{ page.title }}</h2>
+<div class="crollTop">
+        <div class="box-header">
+            <a class="back" href="ewap://1qianbao/merchant/action_finish">&lt;</a>
+            <a class="more" href="#">活动说明</a>
+            <span>求波波宝红包</span>
+        </div>
+        <section class="box-info">
+            <p></p>
+            <button id="toSendBtn">求波波宝红包</button>
+        </section>
+        <div class="box-user">
+            <div class="phb-title">
+                魅力周榜
+                <a href="#">本周奖品</a>
+            </div>
+
+            <div class="phb-user">
+                <ul>
+                    <li class="nbsp">&nbsp;</li>
+                    <li>
+                        <img id="img-head" class="img-head" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozMUU5QUVGOTg4MzUxMUU0OTcxM0U4NzdGNjI5NDNGQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozMUU5QUVGQTg4MzUxMUU0OTcxM0U4NzdGNjI5NDNGQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMxRTlBRUY3ODgzNTExRTQ5NzEzRTg3N0Y2Mjk0M0ZDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjMxRTlBRUY4ODgzNTExRTQ5NzEzRTg3N0Y2Mjk0M0ZDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+EHLJEgAAB7BJREFUeNqsWVls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"/>
+                    </li>
+                    <li>
+                        <div class="user-pm">
+                            <p class="pm-p1" id="hh-rankNo">榜上无名</p>
+                            <p class="pm-p2" id="hh-rankWord">本周还没有人呵护过亲哦T_T</p>   
+                        </div>
+                    </li>
+                    <li id="user-phb" class="user-phb"><span id="hh-counts">111</span>人</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="crollBody" id="wrapper">
+        <section class="box-list">
+            <div class="user-list">
+                <ul id="user-list"></ul>
+                <div id="loadingId" class="loadingId">数据加载中……</div>
+
+            </div>
+        </section>
+    </div>
+<script src="/gitblog/lib/zepto-seajs-min.js"></script>
+<script src="/gitblog/lib/iscroll.js"></script>
+<script>
+	seajs.config({
+	    alias: {
+	        "home":"/gitblog/js/home"
+	    }
+	});
+	seajs.use("home",function(a){a.init()});
+</script>
