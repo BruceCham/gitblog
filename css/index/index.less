@@ -252,6 +252,25 @@
 		-webkit-transition: -webkit-transform 1s;
 		-moz-transition: -moz-transform 1s;
 		-o-transition: -o-transform 1s;
+		img{
+			width: 100%;
+		}
+		.articleHead{
+			position: absolute;
+			bottom: 3px;
+			left: 0;
+			background: #000;
+			background: rgba(0,0,0,0.9);
+			color: #fff;
+			width: 100%;
+			line-height: 28px;
+			font-size: 14px;
+			text-indent: 12px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep all;
+		}
 	}
 	.box:hover{
 		-moz-animation:animations 1.2s ease-in-out;
@@ -259,8 +278,5 @@
 		-o-animation:animations 1.2s ease-in-out;
 		-ms-animation:animations 1.2s ease-in-out;
 		animation:animations 1.2s ease-in-out;
-	}
-	.box img {
-		width: 100%
 	}
 }
