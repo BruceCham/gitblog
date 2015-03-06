@@ -1,5 +1,5 @@
 function audioFn(srcs){
-	$("#mylovewords").attr("src",'./audio/heart2.mp3');
+	$("#mylovewords").attr("src",'/github/audio/heart2.mp3');
 	var _audioWords = document.getElementById("mylovewords");
 	var _audioHeart = document.getElementById("loveheart");
 	_audioWords.addEventListener("play", function () {
@@ -34,7 +34,7 @@ function audioFn(srcs){
 function ValentineAni(){
 	console.log("ValentineAni");
 	if(loveScene.animateTag){
-		var op = '<div class="myballC ballAnimate1"><img src="./img/club1.png"/></div><div class="myballC ballAnimate2"><img src="./img/club2.png"/></div><div class="myballC ballAnimate3"><img src="./img/club3.png"/></div><div class="myballC ballAnimate4"><img src="./img/club4.png"/></div><div class="myballC ballAnimate5"><img src="./img/club5.png"/></div><div class="myballC ballAnimate6"><img src="./img/club6.png"/></div><div class="myballC ballAnimate7"><img src="./img/club7.png"/></div>';
+		var op = '<div class="myballC ballAnimate1"><img src="/gitblog/images/h5_love/club1.png"/></div><div class="myballC ballAnimate2"><img src="/gitblog/images/h5_love/club2.png"/></div><div class="myballC ballAnimate3"><img src="/gitblog/images/h5_love/club3.png"/></div><div class="myballC ballAnimate4"><img src="/gitblog/images/h5_love/club4.png"/></div><div class="myballC ballAnimate5"><img src="/gitblog/images/h5_love/club5.png"/></div><div class="myballC ballAnimate6"><img src="/gitblog/images/h5_love/club6.png"/></div><div class="myballC ballAnimate7"><img src="/gitblog/images/h5_love/club7.png"/></div>';
 		$("body").append(op);
 		loveScene.animateTag = !loveScene.animateTag;
 		var myinterval = setInterval(function(){
@@ -47,7 +47,7 @@ function ValentineAni(){
 			var op = '';
 			for(var i=1;i<8;i++){
 				var ant = parseInt(Math.random()*7+1);
-				op = '<div class="myballC ballAnimate'+ant+'"><img src="./img/club'+ant+'.png"/></div>';
+				op = '<div class="myballC ballAnimate'+ant+'"><img src="/gitblog/images/h5_love/club'+ant+'.png"/></div>';
 			}
 			$("body").append(op);
 			var arrs = $(".myballC");
@@ -77,7 +77,7 @@ var loveScene = {
 			var arrs = ["","2014，我会送你一次最浪漫的夕阳晚餐！","嫁给我吧！","让我带你去只有我们的爱情岛！","要月亮，不会给你星星！","让我给你一个家！"];
 			
 			var myhead = new Image;
-			myhead.src = './img/wxImg0.jpg';
+			myhead.src = '/gitblog/images/h5_love/wxImg0.jpg';
 			myhead.onload = function(){
 				$(".wxphoto img").attr("src",myhead.src);
 				setTimeout(function(){
