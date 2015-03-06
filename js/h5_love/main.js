@@ -1,5 +1,4 @@
 function audioFn(srcs){
-	$("#mylovewords").attr("src",'/github/audio/heart2.mp3');
 	var _audioWords = document.getElementById("mylovewords");
 	var _audioHeart = document.getElementById("loveheart");
 	_audioWords.addEventListener("play", function () {
