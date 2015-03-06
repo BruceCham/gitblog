@@ -15,16 +15,16 @@ img{vertical-align: middle;width:100%;border:0;}
 .fr{float:right;}
 .loadSec{width:50px;position:absolute;margin-left:-25px;margin-top:-25px;left:50%;top:50%;}
 .infoSec{position:absolute;width:100%;height:100%;z-index:2;overflow: hidden;}
-.infoSec .lovesoeal{position: absolute;width: 131px;height: 0px;background: url(../img/deg4.png) no-repeat;background-size: 100%;top: 57px;right: 18px;-webkit-transition: height 2s,-webkit-transform 2s;-ms-transition: height 2s,-ms-transform 2s;-moz-transition: height 2s,-moz-transform 2s;-o-transition: height 2s,-o-transform 2s;}
-.infoSec .lovekedu{position: absolute;top: 0px;left: 4px;width: 10px;height: 100%;background: url(../img/deg3.png) no-repeat;background-size: 100% 100%;}
+.infoSec .lovesoeal{position: absolute;width: 131px;height: 0px;background: url(/gitblog/images/h5_love/deg4.png) no-repeat;background-size: 100%;top: 57px;right: 18px;-webkit-transition: height 2s,-webkit-transform 2s;-ms-transition: height 2s,-ms-transform 2s;-moz-transition: height 2s,-moz-transform 2s;-o-transition: height 2s,-o-transform 2s;}
+.infoSec .lovekedu{position: absolute;top: 0px;left: 4px;width: 10px;height: 100%;background: url(/gitblog/images/h5_love/deg3.png) no-repeat;background-size: 100% 100%;}
 .infoSec .lovewendu{position: absolute;top: 0px;left: 0px;width: 4px;height: 100%;background:#36001c;z-index:1;}
 .infoSec .lovewendu2{position: absolute;bottom: 0px;left: 0px;width: 4px;height: 0%;background:#ff007d;z-index:2;-webkit-transition: height 1s;-ms-transition: height 1s;-moz-transition: height 1s;-o-transition: height 1s;transition: height 1s;}
-.infoSec .lovewendu3{cursor:pointer;position: absolute;bottom: 0%;left: 16px;width: 128px;height: 38px;background: url(../img/deg1.png) no-repeat;background-size: 128px 38px;z-index:2;overflow: hidden;border-radius: 3px;-webkit-transition: bottom 1s;-ms-transition: bottom 1s;-moz-transition: bottom 1s;-o-transition: bottom 1s;transition: bottom 1s;}
+.infoSec .lovewendu3{cursor:pointer;position: absolute;bottom: 0%;left: 16px;width: 128px;height: 38px;background: url(/gitblog/images/h5_love/deg1.png) no-repeat;background-size: 128px 38px;z-index:2;overflow: hidden;border-radius: 3px;-webkit-transition: bottom 1s;-ms-transition: bottom 1s;-moz-transition: bottom 1s;-o-transition: bottom 1s;transition: bottom 1s;}
 .infoSec .lovewendu3 .lovezan{float: right;width: 35px;height: 100%;}
 .infoSec .lovewendu3 .lovenum{float: left;margin-left: 12px;width: 75px;color:#2f2c35;}
 .infoSec .lovewendu3 .lovenum .wnum{text-align:center;font-size: 16px;}
 .infoSec .lovewendu3 .lovenum .lines{text-align:center;border-top: 1px solid #b7b6b9;height: 14px;line-height: 14px;}
-.infoSec .myfinger{position:absolute;text-align:center;width:100px;height:108px;top:35%;right:50px;background:url(../img/finger.png) no-repeat;background-size:100% 100%;font-size:16px;}
+.infoSec .myfinger{position:absolute;text-align:center;width:100px;height:108px;top:35%;right:50px;background:url(/gitblog/images/h5_love/finger.png) no-repeat;background-size:100% 100%;font-size:16px;}
 .infoSec .myfinger .fingerClick{color:red;margin:54px auto;-webkit-animation:fingerC 1s;-ms-animation:fingerC 1s;-moz-animation:fingerC 1s;-o-animation:fingerC 1s;}
 
 .infoSec .wxinfo{position:absolute;bottom:0;width:100%;height:120px;}
@@ -33,16 +33,16 @@ img{vertical-align: middle;width:100%;border:0;}
 .infoSec .wxinfo .wxphoto b{display:block;width: 83px;height: 83px;border-radius: 42px;overflow: hidden;}
 .infoSec .wxinfo .wxmusic{position: absolute;width: 30px;height: 30px;border-radius: 16px;top: 0px;right: 21px;overflow: hidden;z-index:9999;cursor:pointer;}
 .infoSec .wxinfo .wxaudio{position: absolute;width: 30px;height: 30px;border-radius: 16px;top: 70px;right: 70.5px;overflow: hidden;z-index:9999;cursor:pointer;}
-.infoSec .wxinfo .audioY{background: url(../img/audio.png) no-repeat;background-size: 100% 100%;}
-.infoSec .wxinfo .audioN{background: url(../img/audio1.png) no-repeat;background-size: 100% 100%;}
-.infoSec .imgRose{position:absolute;width:100px;height:128px;left: 50%;top: 40%;margin-left: -50px;margin-top: -50px;background:url(../img/flower.png) no-repeat;background-size:100px auto;-webkit-transform-origin: 50% 50%;-ms-transform-origin: 50% 50%;-webkit-transform: scale(0,0);-ms-transform: scale(0,0);-webkit-transition: -webkit-transform 2s,left 0.3s;cursor: pointer;}
+.infoSec .wxinfo .audioY{background: url(/gitblog/images/h5_love/audio.png) no-repeat;background-size: 100% 100%;}
+.infoSec .wxinfo .audioN{background: url(/gitblog/images/h5_love/audio1.png) no-repeat;background-size: 100% 100%;}
+.infoSec .imgRose{position:absolute;width:100px;height:128px;left: 50%;top: 40%;margin-left: -50px;margin-top: -50px;background:url(/gitblog/images/h5_love/flower.png) no-repeat;background-size:100px auto;-webkit-transform-origin: 50% 50%;-ms-transform-origin: 50% 50%;-webkit-transform: scale(0,0);-ms-transform: scale(0,0);-webkit-transition: -webkit-transform 2s,left 0.3s;cursor: pointer;}
 .infoSec .divFinger{position:absolute;width:100px;height:300px;left: 50%;top: -300px;margin-left:-50px;-webkit-transform-origin: 50% 0;}
 .infoSec .aniFinger{top: 0px;-webkit-animation:myfingers 4s;}
 .infoSec .divFinger .fingerLine{margin:0 auto;width: 0px;height:200px;border-left:1px solid rgb(197, 21, 21);border-right:1px solid rgb(197, 21, 21);}
-.infoSec .divFinger .imgFinger{margin:0 auto;width:80px;height:100px;background:url(../img/finger.png) no-repeat;background-size:80px auto;-webkit-transition: left 0.5s;cursor: pointer;}
+.infoSec .divFinger .imgFinger{margin:0 auto;width:80px;height:100px;background:url(/gitblog/images/h5_love/finger.png) no-repeat;background-size:80px auto;-webkit-transition: left 0.5s;cursor: pointer;}
 .infoSec .btnAudio{position:fixed;bottom:10px;right:10px;width:50px;height:50px;cursor:pointer;}
-.infoSec  .btnPlay{background: url(../img/music.png) no-repeat;background-size: 100% 100%;}
-.infoSec  .btnPause{background: url(../img/music1.png) no-repeat;background-size: 100% 100%;}
+.infoSec  .btnPlay{background: url(/gitblog/images/h5_love/music.png) no-repeat;background-size: 100% 100%;}
+.infoSec  .btnPause{background: url(/gitblog/images/h5_love/music1.png) no-repeat;background-size: 100% 100%;}
 .mySnowC{opacity:0;width:20px;position:absolute;z-index:999;}
 .myballC{opacity:0;width:20px;position:absolute;z-index:999;}
 .snowAnimate1{-webkit-animation:flyHeart1 6s ;-moz-animation:flyHeart1 6s ;-ms-animation:flyHeart1 6s ;-o-animation:flyHeart1 6s ;animation:flyHeart1 6s ;}
@@ -62,7 +62,7 @@ img{vertical-align: middle;width:100%;border:0;}
 /*弹出层tip*/
 .blackLay{display:none;position: fixed;z-index: 1001;left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);font-size: 14px;}
 .tip2lay{width: 47%;float: right;clear: both;}
-.tip3lay{width: 90%;padding: 0 5%;clear: both;margin: 0 auto;background: url(../img/tip1.png) no-repeat;background-size: 100% 100%;}
+.tip3lay{width: 90%;padding: 0 5%;clear: both;margin: 0 auto;background: url(/gitblog/images/h5_love/tip1.png) no-repeat;background-size: 100% 100%;}
 @-webkit-keyframes myfingers
 {
 	0%{top:-300px;}
