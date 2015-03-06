@@ -17,24 +17,27 @@
 	a:hover{
 		color: #666;
 	}
-	.info-title:hover{
-		-moz-animation:animations 1.2s ease-in-out;
-		-webkit-animation:animations 1.2s ease-in-out;
-		-o-animation:animations 1.2s ease-in-out;
-		-ms-animation:animations 1.2s ease-in-out;
-		animation:animations 1.2s ease-in-out;
-	}
 	.info-title{
 		display: inline-block;
 		text-shadow: 2px 2px #efefef,4px 4px #aee2d9;
 		font-size: 44px;
 		font-weight: 900;
 		padding-top: 5px;
-		transition: transform 1s;
-		-webkit-transition: -webkit-transform 1s;
-		-moz-transition: -moz-transform 1s;
-		-o-transition: -o-transform 1s;
-		position: relative;
+
+		animation:myname 5s infinite;
+		animation-direction:alternate;
+
+		-webkit-animation:myname 5s infinite;
+		-webkit-animation-direction:alternate;
+
+		-moz-animation:myname 5s infinite;
+		-moz-animation-direction:alternate;
+
+		-ms-animation:myname 5s infinite;
+		-ms-animation-direction:alternate;
+
+		-o-animation:myname 5s infinite;
+		-o-animation-direction:alternate;
 	}
 	.info-email{
 		margin-left: 30px;
@@ -79,6 +82,7 @@
 			-o-animation-direction:alternate;
 		}
 }
+
 .liImg{
 	width: 80%;
 	margin: 0 auto;
@@ -94,6 +98,7 @@
 	-moz-transform: scale(0.9);
 	-o-transform: scale(0.9);
 }
+/*颤抖吧*/
 @-moz-keyframes animations{
 	3%{-webkit-transform:scale(1.1,.6) skew(5deg,5deg);}
 	13%{-webkit-transform:scale(1) skew(0,0);}
@@ -155,6 +160,57 @@
 	100%{-webkit-transform:skew(0,0);}
 }
 
+/*名字动画转动*/
+@keyframes myname
+{
+	from{
+		transform: rotateY(0);
+	}
+	to{
+		transform: rotateY(180deg);
+	}
+}
+
+@-webkit-keyframes myname /* Safari and Chrome */
+{
+	from{
+		-webkit-transform: rotateY(0);
+	}
+	to{
+		-webkit-transform: rotateY(180deg);
+	}
+}
+
+@-moz-keyframes myname /* Safari and Chrome */
+{
+	from{
+		-moz-transform: rotateY(0);
+	}
+	to{
+		-moz-transform: rotateY(180deg);
+	}
+}
+
+@-ms-keyframes myname /* Safari and Chrome */
+{
+	from{
+		-ms-transform: rotateY(0);
+	}
+	to{
+		-ms-transform: rotateY(180deg);
+	}
+}
+
+@-o-keyframes myname /* Safari and Chrome */
+{
+	from{
+		-o-transform: rotateY(0);
+	}
+	to{
+		-o-transform: rotateY(180deg);
+	}
+}
+/*猫头鹰在飞*/
 @keyframes mybird
 {
 	0%   {left:40px;}
@@ -183,4 +239,28 @@
 {
 	0%   {left:40px;}
 	100% {left:935px;}
+}
+
+/*瀑布流样式*/
+.container-fluid {
+	padding: 20px;
+	.box {
+		margin-bottom: 20px;
+		float: left;
+		width: 220px;
+		transition: transform 1s;
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-o-transition: -o-transform 1s;
+	}
+	.box:hover{
+		-moz-animation:animations 1.2s ease-in-out;
+		-webkit-animation:animations 1.2s ease-in-out;
+		-o-animation:animations 1.2s ease-in-out;
+		-ms-animation:animations 1.2s ease-in-out;
+		animation:animations 1.2s ease-in-out;
+	}
+	.box img {
+		max-width: 100%
+	}
 }
