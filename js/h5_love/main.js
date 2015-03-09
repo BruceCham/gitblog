@@ -139,6 +139,7 @@ var loveScene = {
 			console.log("it is clicked");
 			$(".myfinger").html('<div class="fingerClick">+'+loveInfoFn.loveClick+'</div>');
 		});
+		$(document).on('contextmenu', function(){return false;});
 	}
 }
 $(function(){
