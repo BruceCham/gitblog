@@ -1,24 +1,21 @@
 ---
 layout: default
-title: 理性与感性认识
+title: 瀑布流例子
 ---
-<link rel="stylesheet" type="text/css" href="/gitblog/css/index/index.css">
+<link rel="stylesheet" type="text/css" href="/gitblog/css/stream/stream.css">
 <div class="bc-container">
-	<div class="bc-row index-head">
-		<div class="grid-col-25">
-			<a href="https://github.com/brucecham" title="传送门GitHub">
-				<span class="info-title">Litao Zhang</span>
-			</a>
+	<div class="bc-row">
+		<div class="bc-grid-25">
+			<a href="/gitblog" class="bc-back" title="返回博客首页">&nbsp;</a>
 		</div>
-		<div class="headImg1"></div>
-		<div class="headImg2"></div>
-		<div class="abird"></div>
 	</div>
 </div>
 <div class="bc-container">
 	<div class="bc-row">
-		<div id="masonry" class="container-fluid">
-			<p style="text-align:center;">数据加载中……</p>
+		<div class="bc-grid-25">
+			<div id="masonry" class="container-fluid">
+				<p style="text-align:center;">数据加载中……</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -27,7 +24,7 @@ title: 理性与感性认识
 <script type="text/javascript">
 $.ajax({
 		type:"get",
-		url:"/gitblog/json/index/article.json",
+		url:"/gitblog/json/stream/stream.json",
 		dataType: "json",
 		success: function(res){
 			if(res.resultCode == "000000"){
