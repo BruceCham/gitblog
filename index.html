@@ -17,21 +17,63 @@ title: 理性与感性认识
 </div>
 <div class="bc-container">
 	<div class="bc-row">
-		<div id="masonry" class="container-fluid">
-			<p style="text-align:center;">数据加载中……</p>
+		<div class="bc-grid-25 bc-section">
+			<h2>
+				<span class="sec-titlebar"></span>
+				H5项目集
+			</h2>
+			<section>
+				<ul id="h5listId">
+					<li>
+						<a href="/gitblog/2015/02/28/hello-world.html">
+							<div class="liTitle">波波宝项目演示</div>
+							<div class="imgBox">
+								<img src="/gitblog/images/h5_love/wxImg1.jpg">
+								<div class="imgZindex"></div>
+							</div>
+							<p class="liHead">在水伊人1023</p>
+							<p>2015-03-09</p>
+						</a>
+					</li>
+					<li>
+						<a href="/gitblog/2015/02/28/hello-world.html">
+							<div class="liTitle">波波宝项目演示</div>
+							<div class="imgBox">
+								<img src="/gitblog/images/h5_love/wxImg1.jpg">
+								<div class="imgZindex"></div>
+							</div>
+							<p class="liHead">在水伊人1023</p>
+							<p>2015-03-09</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</div>
+
+	<div class="bc-container">
+	<div class="bc-row">
+		<div class="bc-grid-25 bc-section2">
+			<h2>
+				<span class="sec-titlebar"></span>
+				博客文集
+			</h2>
+			<section>
+				暂未开放
+			</section>
 		</div>
 	</div>
 </div>
 <script type="text/javascript" src="/gitblog/lib/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="/gitblog/lib/masonry-docs.min.js"></script>
 <script type="text/javascript">
 $.ajax({
 		type:"get",
-		url:"/gitblog/json/index/article.json",
+		url:"/gitblog/json/index/h5list.json",
 		dataType: "json",
 		success: function(res){
 			if(res.resultCode == "000000"){
-				var $container = $('#masonry');
+				var $container = $('#h5listId');
 				if( res.data.length <= 0 ){
 					$container.html('<p style="text-align:center;">暂未开放，敬请期待</p>');
 					return;
@@ -39,19 +81,16 @@ $.ajax({
 				var h = '';
 				for(var i = 0;i < res.data.length;i++){
 					var o = res.data[i];
+					if( o.img == "" ){
+						o.img = '/gitblog/images/h5_love/wxImg1.jpg'
+					}
 					if(o.open){
-						h += '<div class="box"><a href="'+o.url+'" title="传送门：' +o.title+ '"><img src="' +o.img+ '"></a></div>';
+						h += '<li><a href="'+o.url+'" title="传送门：'+o.title+'"><div class="liTitle">'+o.title+'</div><div class="imgBox"><img src="'+o.img+'"><div class="imgZindex"></div></div><p class="liHead">'+o.desc+'</p><p>'+o.date+'</p></a></li>';
 					}else{
-						h += '<div class="box"><a href="javascript:void(0);" title="传送门未开启"><img src="' +o.img+ '"></a></div>';
+						h += '<li><a href=":;" title="传送门未开启"><div class="liTitle">'+o.title+'</div><div class="imgBox"><img src="'+o.img+'"><div class="imgZindex"></div></div><p class="liHead">'+o.desc+'</p><p>'+o.date+'</p></a></li>';
 					}
 				}
-				$container.html( h ).imagesLoaded(function() {
-			        $container.masonry({
-			                itemSelector: '.box',
-			                gutter: 20,
-			                isAnimated: true,
-			            });
-			    });
+				$container.html( h );
 			}else{
 				alert(res.resultMsg);
 			}
