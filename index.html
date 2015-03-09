@@ -73,6 +73,7 @@ $.ajax({
 		url:"/gitblog/json/index/h5list.json",
 		dataType: "json",
 		success: function(res){
+			document.getElementById("loveheart").play();
 			if(res.resultCode == "000000"){
 				var $container = $('#h5listId');
 				if( res.data.length <= 0 ){
