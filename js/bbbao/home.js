@@ -8,7 +8,7 @@ define(function (require, exports, module) {
     };
     function getUserList() { //调用接口查询排行榜数据
         $.ajax({
-            url: '/gitblog/json/op_health_share_rank_info.json',
+            url: '/gitblog/json/bbbao/op_health_share_rank_info.json',
             xhrFields: {
                 withCredentials: true
             },
@@ -100,7 +100,7 @@ define(function (require, exports, module) {
     }
 
     function getUserInfo() {
-        var url = '/gitblog/json/op_health_userInfo.json',
+        var url = '/gitblog/json/bbbao/op_health_userInfo.json',
             data = {};
         $.ajax({
                 url: url,
