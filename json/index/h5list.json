@@ -25,6 +25,14 @@
 			"date":"2015-02-14",
 			"url": "/gitblog/2015/03/07/love.html",
 			"img":"/gitblog/images/h5_love/wxImg0.jpg"
+		},
+		{
+			"open":true,
+			"title":"元旦烟火演示",
+			"desc":"烈火兮如歌",
+			"date":"2015-02-14",
+			"url": "/gitblog/2015/01/01/new-year.html",
+			"img":"/gitblog/images/h5_newyear/wxImg1.jpg"
 		}
 	]
 }
