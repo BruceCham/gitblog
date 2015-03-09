@@ -35,6 +35,7 @@
 	<script type="text/javascript" src="/gitblog/lib/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="/gitblog/lib/masonry-docs.min.js"></script>
 	<script type="text/javascript">
+	$(document).on('contextmenu', function(){return false;});
 	$.ajax({
 		type:"get",
 		url:"/gitblog/json/index/article.json",
