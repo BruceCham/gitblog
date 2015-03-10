@@ -72,7 +72,13 @@
 				博客文集
 			</h2>
 			<section>
-				暂未开放
+				<ul>
+			　　　　{% for post in site.posts %}
+						{% if post.tags == 'article' %}
+							<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+						{% endif %}
+			　　　　{% endfor %}
+			　　</ul>
 			</section>
 		</div>
 	</div>
