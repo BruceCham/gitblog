@@ -64,7 +64,7 @@ title: 理性与感性认识
 			<section>
 				<ul>
 			　　　　{% for post in site.posts %}
-						{% if page.tags %} 
+						{% if post.tags %} 
 							<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{post.tags}}</a></li>
 						{% endif %}
 			　　　　{% endfor %}
