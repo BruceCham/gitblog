@@ -19,63 +19,52 @@ title: 理性与感性认识
 </div>
 <div class="bc-container">
 	<div class="bc-row">
-		<div class="bc-grid-25 bc-section">
+		<div class="grid-col-25 bc-section">
 			<h2>
 				<span class="sec-titlebar"></span>
 				H5项目集
 			</h2>
 			<section>
-				<ul id="h5listId">
-					<li>
-						<a href="/gitblog/2015/02/28/hello-world.html">
-							<div class="liTitle">波波宝项目演示</div>
-							<div class="imgBox">
-								<img src="/gitblog/images/h5_love/wxImg1.jpg">
-								<div class="imgZindex"></div>
-							</div>
-							<p class="liHead">在水伊人1023</p>
-							<p>2015-03-09</p>
-						</a>
-					</li>
-					<li>
-						<a href="/gitblog/2015/02/28/hello-world.html">
-							<div class="liTitle">波波宝项目演示</div>
-							<div class="imgBox">
-								<img src="/gitblog/images/h5_love/wxImg1.jpg">
-								<div class="imgZindex"></div>
-							</div>
-							<p class="liHead">在水伊人1023</p>
-							<p>2015-03-09</p>
-						</a>
-					</li>
-				</ul>
+				<ul id="h5listId"></ul>
 			</section>
 		</div>
 	</div>
 </div>
 
-	<div class="bc-container">
+<div class="bc-container">
 	<div class="bc-row">
-		<div class="bc-grid-25 bc-section2">
+		<div class="grid-col-12 bc-section2">
 			<h2>
 				<span class="sec-titlebar"></span>
-				博客文集
+				理科集选
 			</h2>
 			<section>
-				<!--遍历全部文章-->
-				<!-- <ul>
-						{% for post in site.posts %}
-						{% if post.article %} 
-							<li>{{ post.date | date_to_string  }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{post.tags}}</a></li>
-						{% endif %}
-			　　　　	{% endfor %}
-			　　</ul> -->
 				<!--遍历js类文章-->
 				<ul>
-			　　　　{% for post in site.categories.js %}
-						<li>{{ post.date | date:"%Y/%m/%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-			　　　　{% endfor %}
-			　　</ul>
+					{% for post in site.categories.js %}
+					<li>
+						{{ post.date | date:"%Y/%m/%d" }}
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</section>
+		</div>
+		<div class="grid-col-13 bc-section2">
+			<h2>
+				<span class="sec-titlebar"></span>
+				文科集选
+			</h2>
+			<section>
+				<!--遍历js类文章-->
+				<ul>
+					{% for post in site.categories.js %}
+					<li>
+						{{ post.date | date:"%Y/%m/%d" }}
+						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
 			</section>
 		</div>
 	</div>
