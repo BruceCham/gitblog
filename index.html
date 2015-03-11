@@ -56,9 +56,9 @@ title: 理性与感性认识
 				文科集选
 			</h2>
 			<section>
-				<!--遍历js类文章-->
+				<!--遍历文科类文章-->
 				<ul>
-					{% for post in site.categories.js %}
+					{% for post in site.categories.word %}
 					<li>
 						{{ post.date | date:"%Y/%m/%d" }}
 						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
