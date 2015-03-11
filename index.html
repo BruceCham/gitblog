@@ -64,11 +64,13 @@ title: 理性与感性认识
 			<section>
 				<!--遍历全部文章-->
 				<!-- <ul>
-			　　　　{% for post in site.posts %}
+					<pre>
+						{% for post in site.posts %}
 						{% if post.article %} 
 							<li>{{ post.date | date_to_string  }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{post.tags}}</a></li>
 						{% endif %}
-			　　　　{% endfor %}
+			　　　　	{% endfor %}
+					</pre>
 			　　</ul> -->
 				<!--遍历js类文章-->
 				<ul>
