@@ -1,0 +1,17 @@
+---
+layout: article
+title: new Function和new new Function
+article: true
+---
+<h2>function myfuns(){}与var myfuns = function(){}</h2>
+<p>前面一种方式创建的是有名函数，而后面是创建了一个无名函数，只是让一个变量指向了这个无名函数。在使用上仅有一点区别，就是：对于有名函数，它可以出现在调用之后再定义；而对于无名函数，它必须是在调用之前就已经定义</p>
+<p>如果把后者写为myfuns(); var newfun = function myfuns(){} 就不一样了，myfuns函数存在，newfun函数不存在</p> 
+<p>估计是js加载解析机制： 在加载时会扫描下是否存在函数定义（注：function funcName()形式），看到函数对象级别的会优先收集并加载，看到变量级别的就往后放放。然后顺序执行，需要调用函数时就去调用，调用不到就报错，当然，但可以try｛｝过去</p>
+
+<h2>function与对象机制？？？</h2>
+<p>Function是父级构造器</p>
+<p>通过new Function(){}形式，创造出各种不同功能的子级构造器： Date,Error,Object,Array,RegExp,Math</p>
+<p>本质上，这6个对象外加new Function()都是构造器，都是new Function的不同体现，都是“funciton”</p>
+<p>typeof(new Function) "function"</p>
+<p>typeof(new new Function)  "object"/*这两个式子总结的太经典了*/</p>
+<p>通过这6+1个再new出来的对象，都是“object” </p>
