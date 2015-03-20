@@ -62,7 +62,7 @@ title: 加载动画
 </style>
 <div style="width:100px;cursor: pointer;height:30px;margin: 20px auto;background:green;" id="btn"></div>
 <div id="loadId"></div>
-<script type="text/javascript" src="/gitblog/lib/zepto-seajs-min.js"></script>
+<script type="text/javascript" src="/gitblog/lib/jquery-2.0.3.min.js"></script>
 <script>
 ;(function($) {
 	$.extend({
@@ -116,7 +116,7 @@ title: 加载动画
 })(jQuery);
 </script>
 <script>
-	$("#btn").tap(function(){
+	$("#btn").click(function(){
 		$.ajaxFn({
 			type:'get',
 			url:"/gitblog/json/index/h5list.json",
