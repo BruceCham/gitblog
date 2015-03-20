@@ -1,0 +1,48 @@
+---
+layout: default
+title: 加载动画
+---
+<style type="text/css">
+  .ui-loadingBox{
+      width: 44px;
+      height: 44px;
+      margin: 20px auto;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAASFBMVEXI59i75NZqs5zE5tfG5tdrtJy85de55NW55dbA5tjG6Ne349S+59m75NTT6t3N6NqAwKpxuKGu3Mye0L2YzrqOybWm18a638+5FcppAAABeUlEQVQ4y83Q0ZaCIBCA4VGQ1K0EBHz/N92ZcRD00NZFF/tfdDC+ZAh+sBsli67rTGewaZqUBNSyLCd8IyyxlzSFvonzbx4Pg+UT0NeYocRYUtJrLGvCRmY6YbMDfN6nRsrlSwDDjFHTIm/y9+M45jvAWNW9aJQY36TvYnr4HLfyKSXfwOaaj7bnXExv8Or6Kuv/wN7255w/YcVNGFon58eif6r/P2NFWKw3Jhx6RWQkAH28OfVcmgwtpWhKQO367vddOsOUO77A94gzhIkrGB+aePLpMTXwXQLQWmesKJ9CCLZg2pQueItOUBOrqkc4w2EYGJs8Rm3z4S7Et2+O2Xql7IAx1jmlKrwNUlAZUwALB1pXOBx4nmfB+JGW5cmhb2Arp0h2e0oFz2vZDm6oWjNuzFySC2+LBNS8F4ZWfVQg1VjZ6uhjqKgvWILVydAeIPHarVorLZ0xgF+xDSiFKw9wxfoSlE6Y4Vcx5BT2MdZYuWC7/4apT/EvRNYnhnzvLegAAAAASUVORK5CYII=) no-repeat;
+      background-size: 44px 44px;
+      -webkit-transform: rotate(360deg);
+      -webkit-animation: loading 1s linear infinite; 
+
+      -moz-transform: rotate(360deg);
+      -moz-animation: loading 1s linear infinite; 
+
+      -ms-transform: rotate(360deg);
+      -ms-animation: loading 1s linear infinite; 
+
+      -o-transform: rotate(360deg);
+      -o-animation: loading 1s linear infinite; 
+
+      transform: rotate(360deg);
+      animation: loading 1s linear infinite; 
+  }
+  @-webkit-keyframes loading {
+      from {-webkit-transform: rotate(0deg);}
+        to {-webkit-transform: rotate(360deg);}
+  }
+  @-moz-keyframes loading {
+      from {-moz-transform: rotate(0deg);}
+        to {-moz-transform: rotate(360deg);}
+  }
+  @-ms-keyframes loading {
+      from {-ms-transform: rotate(0deg);}
+        to {-ms-transform: rotate(360deg);}
+  }
+  @-o-keyframes loading {
+      from {-o-transform: rotate(0deg);}
+        to {-o-transform: rotate(360deg);}
+  }
+  @keyframes loading {
+      from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+  }
+</style>
+<div class="ui-loadingBox"></div>
