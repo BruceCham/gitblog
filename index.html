@@ -45,7 +45,7 @@ title: 理性与感性认识
 					{% for post in site.categories.demo %}
 					<li>
 						{{ post.date | date:"%Y/%m/%d" }}
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						<a title="{{post.title}}" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 					</li>
 					{% endfor %}
 				</ul>
@@ -63,7 +63,7 @@ title: 理性与感性认识
 					{% for post in site.categories.js %}
 					<li>
 						{{ post.date | date:"%Y/%m/%d" }}
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						<a title="{{post.title}}" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 					</li>
 					{% endfor %}
 				</ul>
@@ -80,7 +80,7 @@ title: 理性与感性认识
 					{% for post in site.categories.word %}
 					<li>
 						{{ post.date | date:"%Y/%m/%d" }}
-						<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						<a title="{{post.title}}" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 					</li>
 					{% endfor %}
 				</ul>
