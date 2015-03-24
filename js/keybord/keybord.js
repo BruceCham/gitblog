@@ -4,6 +4,13 @@ define(function (require,exports,module){
 			$("#keybordBox").slideDown()
 		});
 		$("#keybordBox .box").on('touchend',function(e){
+			$(e.currentTarget).css({
+				'transform': scale(1),
+				'-webkit-transform': scale(1),
+				'-moz-transform': scale(1),
+				'-ms-transform': scale(1),
+				'-o-transform': scale(1)
+			});   
 			var T = $(e.currentTarget),Input = $("#activeBtn"),
 			InVal = Input.data("value"),InTxt = Input.html();
 			if( T.data("type") == "sure" ){
