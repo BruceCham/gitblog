@@ -1,9 +1,9 @@
 define(function (require,exports,module){
 	exports.init = function(){
-		$("#activeBtn").touchend(function(){
+		$("#activeBtn").on('touchend',function(){
 			$("#keybordBox").show()
 		});
-		$("#keybordBox .box").touchend(function(e){
+		$("#keybordBox .box").on('touchend',function(e){
 			var T = $(e.currentTarget),Input = $("#activeBtn"),
 			InVal = Input.data("value"),InTxt = Input.html();
 			if( T.data("type") == "sure" ){
