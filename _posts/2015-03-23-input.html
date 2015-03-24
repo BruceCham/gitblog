@@ -33,7 +33,7 @@ title: input框测试
   background-size: 100% 32px;
 }
 </style>
-bbbb
+cccc
 <div class="psw-box">
     <input type="password" class="psw-input" maxlength="6">
 </div>
@@ -42,8 +42,10 @@ bbbb
 <script type="text/javascript">
 $(".psw-input").on('input',function(){
     if( $(this).val().length >= 6 ){
-      console.log("0")
       $("#tap").focus();
+      setTimeout(function(){
+        $("#tap").hide();
+      },201)
     }
   });
 </script>
