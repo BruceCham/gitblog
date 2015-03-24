@@ -45,7 +45,7 @@ $(".psw-input").on('input',function(){
     if( $(this).val().length >= 6 ){
       $("#tap").focus();
       setTimeout(function(){
-        $("#showval").val( $(".psw-input").val() );
+        $("#showval").html( $(".psw-input").val() );
         $("#tap").hide();
         $("body").scrollTop(0)
       },201)
