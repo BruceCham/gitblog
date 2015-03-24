@@ -37,4 +37,13 @@ bbbb
 <div class="psw-box">
     <input type="password" class="psw-input" maxlength="6">
 </div>
-<script src="/gitblog/lib/jquery-2.0.3.min.js"></script>
+<input id="tap" style="width:80px;line-height:30px;background:#d3d3d3;margin: 20px auto;text-align: center;color: #fff;opacity:0">
+<script src="/gitblog/lib/zepto-seajs-min.js"></script>
+<script type="text/javascript">
+$(".psw-input").on('input',function(){
+    if( $(this).val().length >= 6 ){
+      console.log("0")
+      $("#tap").focus();
+    }
+  });
+</script>
