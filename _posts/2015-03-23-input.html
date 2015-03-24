@@ -33,10 +33,11 @@ title: input框测试
   background-size: 100% 32px;
 }
 </style>
-请输入支付密码
+请输入支付密码:
 <div class="psw-box">
     <input type="password" class="psw-input" maxlength="6">
 </div>
+<div id="showval" style="text-align: center;color: #000"></div>
 <input id="tap" style="width:80px;line-height:30px;background:#d3d3d3;margin: 20px auto;text-align: center;color: #fff;opacity:0">
 <script src="/gitblog/lib/zepto-seajs-min.js"></script>
 <script type="text/javascript">
@@ -44,7 +45,9 @@ $(".psw-input").on('input',function(){
     if( $(this).val().length >= 6 ){
       $("#tap").focus();
       setTimeout(function(){
+        $("#showval").val( $(".psw-input").val() );
         $("#tap").hide();
+        $("body").scrollTop(0)
       },201)
     }
   });
