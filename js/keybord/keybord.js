@@ -1,13 +1,13 @@
 define(function (require,exports,module){
 	exports.init = function(){
 		$("#activeBtn").click(function(){
-			$("#keybordBox").slideDown()
+			$("#keybordBox").show()
 		});
 		$("#keybordBox .box").click(function(e){
 			var T = $(e.currentTarget),Input = $("#activeBtn"),
 			InVal = Input.data("value"),InTxt = Input.html();
 			if( T.data("type") == "sure" ){
-				$("#keybordBox").slideUp();
+				$("#keybordBox").hide();
 			}else if( T.data("type") == "del"){
 				var InValDel = InVal.substring(0,InVal.length-1),
 				InTxtDel = InTxt.substring(0,InTxt.length-1);
