@@ -43,6 +43,56 @@ define(function (require,exports,module){
 					},201)
 				}
 			}
-		})
+		});
+		
+		$("#pwdBtn").on('change',function(){
+			var Input = $(this),
+			InVal = Input.data("value") , InTxt = Input.val();
+			if( InVal.length =< InTxt.length ){
+				if( InVal.length < 6 ){
+					if(InVal.length == 0){
+						InTxt = "";
+					}
+					Input.val( InTxt + Input.data("value") ).data("value", InVal + Input.data("value"));
+					setTimeout(function(){
+						var setTval = $("#pwdBtn").val()
+						Input.val( setTval.replace(/\d/g,"●") )
+					},201)
+				}else{
+					alert( InVal + ";" + InTxt );
+				}
+			}else if( InVal.length > InTxt.length ){
+				var InValDel = InVal.substring(0,InVal.length-1),
+				InTxtDel = InTxt.substring(0,InTxt.length-1);
+				Input.val(InTxtDel).data("value",InValDel);
+				if( InValDel == "" ){
+					// Input.html("请输入密码")
+				}
+			}
+
+
+
+			// if( T.data("type") == "del"){
+			// 	var InValDel = InVal.substring(0,InVal.length-1),
+			// 	InTxtDel = InTxt.substring(0,InTxt.length-1);
+			// 	Input.val(InTxtDel).data("value",InValDel);
+			// 	if( InValDel == "" ){
+			// 		// Input.html("请输入密码")
+			// 	}
+			// }else if( T.data("type") == "num" ){
+			// 	if( InVal.length < 6 ){
+			// 		if(InVal.length == 0){
+			// 			InTxt = "";
+			// 		}
+			// 		Input.val( InTxt + T.data("value") ).data("value", InVal + T.data("value"));
+			// 		setTimeout(function(){
+			// 			var setTval = $("#activeBtn").val()
+			// 			Input.val( setTval.replace(/\d/g,"●") )
+			// 		},201)
+			// 	}
+			// }
+		});
+
+	
 	}
 })
