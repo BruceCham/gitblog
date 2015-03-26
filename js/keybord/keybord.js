@@ -50,45 +50,24 @@ define(function (require,exports,module){
 			InVal = Input.data("value") , InTxt = Input.val();
 			if( InVal.length <= InTxt.length ){
 				if( InVal.length < 6 ){
-					Input.val( InTxt + Input.data("value") ).data("value", Input.data("value") + InTxt.substring(InTxt.length-1,InTxt.length));
+					Input.data("value", Input.data("value") + InTxt.substring(InTxt.length-1,InTxt.length));
 					setTimeout(function(){
 						var setTval = $("#pwdBtn").val();
-						Input.data("value","");
-						Input.val( setTval.replace(/\d/g,"●") )
+						Input.val( setTval.replace(/\d/g,"●") );
+						if( Input.data("value").length == 6 ){
+							alert( Input.data("value") + ";" + Input.val() );
+						}
 					},201)
 				}else{
-					alert( InVal + ";" + InTxt );
+					alert( Input.data("value") + ";" + Input.val() );
 				}
 			}else if( InVal.length > InTxt.length ){
-				var InValDel = InVal.substring(0,InVal.length-1),
-				InTxtDel = InTxt.substring(0,InTxt.length-1);
-				Input.val(InTxtDel).data("value",InValDel);
+				var InValDel = InVal.substring(0,InVal.length-1);
+				Input.data("value",InValDel);
 				if( InValDel == "" ){
 					// Input.html("请输入密码")
 				}
 			}
-
-
-
-			// if( T.data("type") == "del"){
-			// 	var InValDel = InVal.substring(0,InVal.length-1),
-			// 	InTxtDel = InTxt.substring(0,InTxt.length-1);
-			// 	Input.val(InTxtDel).data("value",InValDel);
-			// 	if( InValDel == "" ){
-			// 		// Input.html("请输入密码")
-			// 	}
-			// }else if( T.data("type") == "num" ){
-			// 	if( InVal.length < 6 ){
-			// 		if(InVal.length == 0){
-			// 			InTxt = "";
-			// 		}
-			// 		Input.val( InTxt + T.data("value") ).data("value", InVal + T.data("value"));
-			// 		setTimeout(function(){
-			// 			var setTval = $("#activeBtn").val()
-			// 			Input.val( setTval.replace(/\d/g,"●") )
-			// 		},201)
-			// 	}
-			// }
 		});
 
 	
