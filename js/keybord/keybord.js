@@ -49,6 +49,7 @@ define(function (require,exports,module){
 			var Input = $(this),
 			InVal = Input.data("value") , InTxt = Input.val();
 			if( InTxt.substring(InTxt.length-1,InTxt.length).replace(/\d/,'') == "" ){
+				Input.val( InTxt.substring(0,InTxt.length-1) );
 				return false;
 			}
 
