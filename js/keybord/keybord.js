@@ -48,7 +48,7 @@ define(function (require,exports,module){
 		$("#pwdBtn").on('change',function(){
 			var Input = $(this),
 			InVal = Input.data("value") , InTxt = Input.val();
-			if( InVal.length =< InTxt.length ){
+			if( InVal.length <= InTxt.length ){
 				if( InVal.length < 6 ){
 					if(InVal.length == 0){
 						InTxt = "";
