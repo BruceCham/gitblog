@@ -48,13 +48,13 @@ define(function (require,exports,module){
 		$("#pwdBtn").on('input',function(){
 			var Input = $(this),
 			InVal = Input.data("value") , InTxt = Input.val();
-			if( InTxt.substring(InTxt.length-1,InTxt.length).replace(/\D/,'') == "" ){
-				Input.val( InTxt.substring(0,InTxt.length-1) );
-				return false;
-			}
-
 			if( InVal.length <= InTxt.length ){
 				if( InVal.length < 6 ){
+					if( InTxt.substring(InTxt.length-1,InTxt.length).replace(/\D/,'') == "" ){
+						Input.val( InTxt.substring(0,InTxt.length-1) );
+						return false;
+					}
+					
 					Input.data("value", Input.data("value") + InTxt.substring(InTxt.length-1,InTxt.length));
 					setTimeout(function(){
 						var setTval = $("#pwdBtn").val();
