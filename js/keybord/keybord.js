@@ -50,9 +50,10 @@ define(function (require,exports,module){
 			InVal = Input.data("value") , InTxt = Input.val();
 			if( InVal.length <= InTxt.length ){
 				if( InVal.length < 6 ){
-					Input.val( InTxt + Input.data("value") ).data("value", InVal + Input.data("value"));
+					Input.val( InTxt + Input.data("value") ).data("value", Input.data("value") + InTxt.subStr(InTxt.length-1,1));
 					setTimeout(function(){
-						var setTval = $("#pwdBtn").val()
+						var setTval = $("#pwdBtn").val();
+						Input.data("value","");
 						Input.val( setTval.replace(/\d/g,"●") )
 					},201)
 				}else{
