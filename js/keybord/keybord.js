@@ -48,7 +48,7 @@ define(function (require,exports,module){
 		$("#pwdBtn").on('input',function(){
 			var Input = $(this),
 			InVal = Input.data("value") , InTxt = Input.val();
-			if( InTxt.substring(InTxt.length-1,InTxt.length).replace(/\d/,'') == "" ){
+			if( InTxt.substring(InTxt.length-1,InTxt.length).replace(/\D/,'') == "" ){
 				Input.val( InTxt.substring(0,InTxt.length-1) );
 				return false;
 			}
