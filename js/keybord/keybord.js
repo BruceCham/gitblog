@@ -45,7 +45,7 @@ define(function (require,exports,module){
 			}
 		});
 		
-		$("#pwdBtn").on('change',function(){
+		$("#pwdBtn").on('input',function(){
 			var Input = $(this),
 			InVal = Input.data("value") , InTxt = Input.val();
 			if( InVal.length <= InTxt.length ){
