@@ -70,7 +70,7 @@ var loveScene = {
 	animateTag: true,
 	init: function(){
 			document.getElementById("loveheart").play();
-			$(".wxname").html("张亚歌");
+			$(".wxname").html("BruceCham");
 			$("#pcount").html(20);
 			audioFn();
 			var arrs = ["","2014，我会送你一次最浪漫的夕阳晚餐！","嫁给我吧！","让我带你去只有我们的爱情岛！","要月亮，不会给你星星！","让我给你一个家！"];
