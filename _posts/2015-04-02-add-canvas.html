@@ -1,0 +1,147 @@
+---
+layout: default
+title: canvas画图
+---
+<style type="text/css">
+  .canvasBox{
+    margin:20px auto;width: 100px;position:relative;
+  }
+  .logo{
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: 50%;
+      left: 50%;
+      margin-left: -14px;
+      margin-top: -14px;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA7CAMAAAAZzLmCAAAA7VBMVEUAAADyzNDstbnhiZPjkpvqq7LOOUr12Nv56OnYY3D////////tuL3vwMXts7nrr7buur/xx8z33N/67e3cdYDmnKT////////NNEbOOkzijZbppq7MLkLOOEvkkpzzz9P9+Pf////UVGLee4bhhZDjjZfttbvvwMX55ufRRFTWWmnee4fhg4734OPz0NT56+zQQ1PWWmnZZ3bZaHTxx8v88vH++frJJjvIJTjJJDjGHDDFFivJJjnIITXGGi/JJDnIJDnHHzPIJjjFGC3IJDfFFCnMLUHKKTzJJjrIIjbHHTHGGC3JIzfKLkDDDCIalaOqAAAAOHRSTlMATnWjmX/xTTTIBglwZ3Z7bVM7MMKUDwP48aeJ+PagViIB3rGpn4JyRezJubNRSjno1c7EYC0Y87EM7t0AAALKSURBVEjH3dVpc9owEAZgQpvQBHMk3EeBAAFy36nWtixZtoOv5P//nMoCG8jEbeWZznT6Dl/W+JkdrYTISWZ0/ZKTz2nx+rJdknfN68t+4JSlXeGqH5hMk4WjRjvACCEtL+eKXc0ElAEOEUYAGWAlAERpBrhvIAIoS0eDd/wFbBaqzdSOLBW2CpfLg1pKR5voKbC4uOpb/sG3lI4UQgGrH79adNuBycwYvtwc7yU5nt+bAIRyaAxuogcnyeJmB5YHrh7D54el6y5FkG8YjsbQKoxXhvp+EcOSqxJgJIH7Gg49z8M4tDr1yWRyjykVU/UfB91ud9qLx1IPmI0IS+AXn1LC36Pq4W3rtBVtB0Nba2yt4dGhRV3bdTdQZYwgAh6br4dDGAhYXpMEAmNU34JUR0AofttL9hF9DsXjLShKhF8TCLaA+f8MUvBiqCJA6ZBCDM8EhDDuWDEoIZ/A5mEgoG52auLA19VVHcOGStgKKmtyW4rS7XsoSui1e1VFUQZ9HJUuw8tBSVGqvQ5mSEBj+sTfrw5z8x+WFViOqYsOLrMDLQgCx2cCErBVy9Isx9BDRqg45BYPP+QLpVwu55Wxj4TkHZWofjCjktje66Caz+erExNWw1GnUV15ig/5YzzVTu3T7agk26H8mwfg70LK47pYHoII7tSkYPHQMUW0u5EcrL99j9I+nxWlYKt2ssqIOxm4mwQisrmsXBsIAfpnkHB4s4bAawAWlNPR5vdI4hugyWsA/iEfh7Mo7KTxhiNoI2/ZKwwLwyvX5gooIcF8F168OzsxWQTBpshyNF6rvq/6PNr4eRdWzr5upzHGAgJ169vPz3q3R7n0bC4rgpfDnETiqTLXWx5ngcBwNkjCLB1FMsKQZoQUsq6RD2cvGzTuRpLQp8wG3bdnR7IdIfrbOJ81c7KQmcZ5o5Y7lYRTR+00alzJpjL+DfsJ8DII9iI9ku4AAAAASUVORK5CYII=) no-repeat 50% #fff;
+      background-size: 28px;
+  }
+</style>
+  <div class="canvasBox">
+    <canvas id="canvas" width=100 height=100></canvas>
+    <div class="logo"></div>
+  </div>
+<script src="/gitblog/lib/zepto-seajs-min.js"></script>
+<script type="text/javascript">
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+    }
+    if (!window.requestAnimationFrame) window.requestAnimationFrame = function(callback, element) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function() {
+            callback(currTime + timeToCall);
+        }, timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
+    };
+    if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function(id) {
+        clearTimeout(id);
+    };
+}());
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var W = canvas.width 
+    H = canvas.height , 
+    pen = 0 ,//当前画笔的弧度百分比位置  0-100
+    per = 0.5,//画笔增副
+    lineWidth = 8,
+    r = 25,//半径
+    degAll = 0;
+  function drawBg(){
+    ctx.clearRect(0,0,W,H);
+    ctx.beginPath();
+    ctx.strokeStyle="#333";
+    ctx.lineWidth = lineWidth;
+    ctx.arc( W/2, H/2, r, pen, Math.PI*2, false);
+    ctx.stroke();
+  }
+
+  function addCanvas1(){
+    ctx.beginPath();
+    ctx.strokeStyle = "#D96429";
+    ctx.lineWidth = lineWidth;
+    ctx.arc(
+      W/2, 
+      H/2, 
+      r, 
+      0*3.6*Math.PI/180-90*Math.PI/180, 
+      30*3.6*Math.PI/180-90*Math.PI/180,
+      false
+    );
+    ctx.stroke();
+  }
+
+  function addCanvas2(){
+    ctx.beginPath();
+    ctx.strokeStyle = "#D96429";
+    ctx.lineWidth = lineWidth;
+    ctx.arc(
+      W/2, 
+      H/2, 
+      r, 
+      0*3.6*Math.PI/180-90*Math.PI/180, 
+      30*3.6*Math.PI/180-90*Math.PI/180,
+      false
+    );
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#2972D9";
+    ctx.lineWidth = lineWidth;
+    ctx.arc(
+      W/2, 
+      H/2, 
+      r, 
+      30*3.6*Math.PI/180-90*Math.PI/180, 
+      70*3.6*Math.PI/180-90*Math.PI/180,
+      false
+    );
+    ctx.stroke();
+  }
+
+  function draw( cor, k){
+    //优化图像效果 start
+    ctx.clearRect(0,0,W,H);
+    if( k == 30 ){
+      addCanvas1();
+    }else if( k == 70 ){
+      addCanvas2();
+    }
+    //优化图像效果 end
+    ctx.beginPath();
+    ctx.strokeStyle = cor;
+    ctx.lineWidth = lineWidth;
+    var pen2 = pen + per;
+    ctx.arc(
+      W/2, 
+      H/2, 
+      r, 
+      k*3.6*Math.PI/180-90*Math.PI/180, 
+      pen2*3.6*Math.PI/180-90*Math.PI/180,
+      false
+    );
+    pen = pen2;
+    ctx.stroke();
+  }
+
+  var _run = function() {
+      if( pen < 30 ){
+        draw("#D96429",0);
+      }else if(pen < 70){
+        draw("#2972D9",30);
+      }else if(pen <= 100){
+        draw("#74C46B",70);
+      }else{
+        cancelAnimationFrame( _run );
+        return;
+      }
+    requestAnimationFrame( _run );
+  };
+  _run();
+</script>
