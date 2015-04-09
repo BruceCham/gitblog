@@ -31,13 +31,6 @@ category: demo
     -webkit-transition: -webkit-transform .1s;
     -o-transition: -o-transform .1s
   }
-/*  .box:active,.box:hover{
-    transform: scale(.9);
-    -webkit-transform: scale(.9);
-    -moz-transform: scale(.9);
-    -ms-transform: scale(.9);
-    -o-transform: scale(.9);
-  }*/
   .box img{
     width:100%;
     display: block;
@@ -82,11 +75,24 @@ category: demo
   margin-top: -0.74rem;
   font-size: 1.48rem;
   }
+  @media screen and (orientation:landscape) {
+  .container{
+    width: 320px;
+  }
+  .container .box{
+    width: 48px;
+  }
+  .num{
+    font-size: 14px;
+    line-height: 32px;
+  }
+  .word{
+  margin-top: -12px;
+  line-height: 24px;
+  font-size: 14px;
+  }
+}
 </style>
-
-<input style="display: none" type="tel" id="pwdBtn" data-value="" maxlength="6" placeholder="tel" autofocus="autofocus">
-
-
   <div class="psd-box">
     <span class="psd-bg"></span><span class="psd-bg"></span><span class="psd-bg"></span><span class="psd-bg"></span><span class="psd-bg"></span>
     <div id="activeBtn" class="wordbox" data-value=""></div>
