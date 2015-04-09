@@ -119,4 +119,13 @@ category: demo
   <span class="box" data-type="del" data-value="删除"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAWAQMAAACBq+yJAAAABlBMVEX////8/fz8BXgNAAAAD0lEQVQI12MAgj8MgxEAAJRCAP1Nh9NAAAAAAElFTkSuQmCC"><div class="num word">删除</div></span>
 </div>
 <script src="/gitblog/lib/global.js"></script>
-<script src="/gitblog/js/keybord/keybords.js"></script>
+<script type="text/javascript">
+seajs.config({
+    alias: {
+      "keybord" : "/gitblog/js/keybord/keybord"
+    }
+});
+seajs.use("keybord" ,function(keybord){ 
+  keybord.init();
+});
+</script>
