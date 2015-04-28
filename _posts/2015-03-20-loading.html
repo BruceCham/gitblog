@@ -105,9 +105,11 @@ category: demo
                 },
                 layoutStr: '<div id="hb-layout" class="ui-layoutBox"><div class="ui-loadingBody"><div class="ui-loadingBox"></div><p>加载中</p></div></div>',
                 closeLayout : function(){
+                  $("html,body").removeClass("fixedBodyPos");
                 	$("#hb-layout").remove();	
                 },
                 showLayout: function(){
+                  $("html,body").addClass("fixedBodyPos");
                 	$("body").append(this.layoutStr);
                 }
             },options);
